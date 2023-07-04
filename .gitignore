@@ -90,6 +90,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+build
 
 # Gatsby files
 .cache/
@@ -121,6 +122,8 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+.idea
+.DS_Store
 
 # yarn v2
 .yarn/cache
