@@ -2,11 +2,9 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  build-and-publish:
-    name: build
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: docker build
-        uses: actions/docker/cli@master
-        with:
-          args: build -t barellano/docker-react -f Dockerfile.dev .
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile.dev --t barellano/docker-react
